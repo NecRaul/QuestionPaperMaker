@@ -82,10 +82,10 @@ namespace QuestionPaperMaker
                     int randomIndex = random.Next(0, questionsList.Count);
                     return questionsList[randomIndex];
                 };
-                richEditControl.Document.ReplaceAll("[Question 1]", getRandomQuestion(questions1List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
-                richEditControl.Document.ReplaceAll("[Question 2]", getRandomQuestion(questions2List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
-                richEditControl.Document.ReplaceAll("[Question 3]", getRandomQuestion(questions3List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
-                richEditControl.Document.ReplaceAll("[Question 4]", getRandomQuestion(questions4List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question1]", getRandomQuestion(questions1List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question2]", getRandomQuestion(questions2List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question3]", getRandomQuestion(questions3List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question4]", getRandomQuestion(questions4List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
             }
         }
     }
