@@ -13,14 +13,11 @@ namespace QuestionPaperMaker
 {
     public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm1()
+        public XtraForm1(string documentPath)
         {
             InitializeComponent();
-        }
-
-        private void btnOpenDocument_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
+            richEditControl.LoadDocument("");
+            richEditControl.Document.ReplaceAll("", "", DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
         }
     }
 }
