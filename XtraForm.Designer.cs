@@ -30,7 +30,7 @@
         {
             txtFaculty = new DevExpress.XtraEditors.TextEdit();
             txtGroup = new DevExpress.XtraEditors.TextEdit();
-            txtClass = new DevExpress.XtraEditors.TextEdit();
+            txtSubject = new DevExpress.XtraEditors.TextEdit();
             txtTeacher = new DevExpress.XtraEditors.TextEdit();
             txtYearAndSemester = new DevExpress.XtraEditors.TextEdit();
             btnLoad = new DevExpress.XtraEditors.SimpleButton();
@@ -44,7 +44,7 @@
             labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)txtFaculty.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtGroup.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txtClass.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtSubject.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtTeacher.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtYearAndSemester.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)spnPaperCount.Properties).BeginInit();
@@ -64,12 +64,12 @@
             txtGroup.Size = new Size(100, 20);
             txtGroup.TabIndex = 1;
             // 
-            // txtClass
+            // txtSubject
             // 
-            txtClass.Location = new Point(127, 66);
-            txtClass.Name = "txtClass";
-            txtClass.Size = new Size(100, 20);
-            txtClass.TabIndex = 2;
+            txtSubject.Location = new Point(127, 66);
+            txtSubject.Name = "txtSubject";
+            txtSubject.Size = new Size(100, 20);
+            txtSubject.TabIndex = 2;
             // 
             // txtTeacher
             // 
@@ -176,14 +176,14 @@
             Controls.Add(btnLoad);
             Controls.Add(txtYearAndSemester);
             Controls.Add(txtTeacher);
-            Controls.Add(txtClass);
+            Controls.Add(txtSubject);
             Controls.Add(txtGroup);
             Controls.Add(txtFaculty);
             Name = "XtraForm";
             Text = "XtraForm";
             ((System.ComponentModel.ISupportInitialize)txtFaculty.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtGroup.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txtClass.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtSubject.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtTeacher.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtYearAndSemester.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)spnPaperCount.Properties).EndInit();
@@ -195,7 +195,7 @@
 
         private DevExpress.XtraEditors.TextEdit txtFaculty;
         private DevExpress.XtraEditors.TextEdit txtGroup;
-        private DevExpress.XtraEditors.TextEdit txtClass;
+        private DevExpress.XtraEditors.TextEdit txtSubject;
         private DevExpress.XtraEditors.TextEdit txtTeacher;
         private DevExpress.XtraEditors.TextEdit txtYearAndSemester;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
