@@ -181,6 +181,7 @@
             Controls.Add(txtGroup);
             Controls.Add(txtFaculty);
             Name = "XtraForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "XtraForm";
             ((System.ComponentModel.ISupportInitialize)txtFaculty.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtGroup.Properties).EndInit();

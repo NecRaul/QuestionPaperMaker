@@ -39,7 +39,6 @@
             undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
             redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
             fileNewItem1 = new DevExpress.XtraRichEdit.UI.FileNewItem();
-            btnOpenDocument = new DevExpress.XtraBars.BarButtonItem();
             fileSaveAsItem1 = new DevExpress.XtraRichEdit.UI.FileSaveAsItem();
             quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
             printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
@@ -52,6 +51,7 @@
             fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
             encryptDocumentItem1 = new DevExpress.XtraRichEdit.UI.EncryptDocumentItem();
             showDocumentPropertiesFormItem1 = new DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem();
+            btnOpenDocument = new DevExpress.XtraBars.BarButtonItem();
             richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(components);
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)richEditBarController1).BeginInit();
@@ -101,18 +101,6 @@
             // 
             fileNewItem1.Id = 2;
             fileNewItem1.Name = "fileNewItem1";
-            // 
-            // btnOpenDocument
-            // 
-            btnOpenDocument.Caption = "barButtonItem1";
-            btnOpenDocument.Id = 11;
-            btnOpenDocument.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnOpenDocument.ImageOptions.SvgImage");
-            btnOpenDocument.Name = "btnOpenDocument";
-            toolTipTitleItem1.Text = "Open (Ctrl+O)";
-            toolTipItem1.Text = "Open a document.";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            btnOpenDocument.SuperTip = superToolTip1;
             // 
             // fileSaveAsItem1
             // 
@@ -186,6 +174,18 @@
             showDocumentPropertiesFormItem1.Id = 10;
             showDocumentPropertiesFormItem1.Name = "showDocumentPropertiesFormItem1";
             // 
+            // btnOpenDocument
+            // 
+            btnOpenDocument.Caption = "barButtonItem1";
+            btnOpenDocument.Id = 11;
+            btnOpenDocument.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnOpenDocument.ImageOptions.SvgImage");
+            btnOpenDocument.Name = "btnOpenDocument";
+            toolTipTitleItem1.Text = "Open (Ctrl+O)";
+            toolTipItem1.Text = "Open a document.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            btnOpenDocument.SuperTip = superToolTip1;
+            // 
             // richEditBarController1
             // 
             richEditBarController1.BarItems.Add(undoItem1);
@@ -212,6 +212,7 @@
             Controls.Add(barDockControlBottom);
             Controls.Add(barDockControlTop);
             Name = "XtraForm1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "XtraForm1";
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)richEditBarController1).EndInit();
