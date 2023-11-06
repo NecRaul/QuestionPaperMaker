@@ -77,7 +77,8 @@ namespace QuestionPaperMaker
                 richEditControl.Document.ReplaceAll("[Teacher]", teacher, DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
                 richEditControl.Document.ReplaceAll("[YearAndSemester]", yearAndSemester, DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
                 var random = new Random();
-                Func<List<string>, string> getRandomQuestion = (questionsList) => {
+                Func<List<string>, string> getRandomQuestion = (questionsList) =>
+                {
                     int randomIndex = random.Next(0, questionsList.Count);
                     return questionsList[randomIndex];
                 };
