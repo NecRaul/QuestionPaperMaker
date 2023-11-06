@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm1));
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            richEditControl = new DevExpress.XtraRichEdit.RichEditControl();
             barManager1 = new DevExpress.XtraBars.BarManager(components);
-            barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(components);
             commonBar1 = new DevExpress.XtraRichEdit.UI.CommonBar();
             undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
             redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
@@ -46,89 +45,47 @@
             quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
             printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
             printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
-            fileInfoBar1 = new DevExpress.XtraRichEdit.UI.FileInfoBar();
             encryptDocumentItem1 = new DevExpress.XtraRichEdit.UI.EncryptDocumentItem();
             showDocumentPropertiesFormItem1 = new DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem();
+            barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(components);
+            btnOpenDocument = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)richEditBarController1).BeginInit();
             SuspendLayout();
             // 
-            // richEditControl1
+            // richEditControl
             // 
-            richEditControl1.Dock = DockStyle.Fill;
-            richEditControl1.Location = new Point(0, 24);
-            richEditControl1.MenuManager = barManager1;
-            richEditControl1.Name = "richEditControl1";
-            richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
-            richEditControl1.Options.Printing.PrintPreviewFormKind = DevExpress.XtraRichEdit.PrintPreviewFormKind.Bars;
-            richEditControl1.Size = new Size(898, 484);
-            richEditControl1.TabIndex = 0;
+            richEditControl.Dock = DockStyle.Fill;
+            richEditControl.Location = new Point(0, 24);
+            richEditControl.MenuManager = barManager1;
+            richEditControl.Name = "richEditControl";
+            richEditControl.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
+            richEditControl.Options.Printing.PrintPreviewFormKind = DevExpress.XtraRichEdit.PrintPreviewFormKind.Bars;
+            richEditControl.Size = new Size(898, 484);
+            richEditControl.TabIndex = 0;
             // 
             // barManager1
             // 
-            barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] { commonBar1, fileInfoBar1 });
+            barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] { commonBar1 });
             barManager1.DockControls.Add(barDockControlTop);
             barManager1.DockControls.Add(barDockControlBottom);
             barManager1.DockControls.Add(barDockControlLeft);
             barManager1.DockControls.Add(barDockControlRight);
             barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { undoItem1, redoItem1, fileNewItem1, fileOpenItem1, fileSaveItem1, fileSaveAsItem1, quickPrintItem1, printItem1, printPreviewItem1, encryptDocumentItem1, showDocumentPropertiesFormItem1 });
-            barManager1.MaxItemId = 11;
-            // 
-            // barDockControlTop
-            // 
-            barDockControlTop.CausesValidation = false;
-            barDockControlTop.Dock = DockStyle.Top;
-            barDockControlTop.Location = new Point(0, 0);
-            barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(898, 24);
-            // 
-            // barDockControlBottom
-            // 
-            barDockControlBottom.CausesValidation = false;
-            barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 508);
-            barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(898, 0);
-            // 
-            // barDockControlLeft
-            // 
-            barDockControlLeft.CausesValidation = false;
-            barDockControlLeft.Dock = DockStyle.Left;
-            barDockControlLeft.Location = new Point(0, 24);
-            barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 484);
-            // 
-            // barDockControlRight
-            // 
-            barDockControlRight.CausesValidation = false;
-            barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(898, 24);
-            barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 484);
-            // 
-            // richEditBarController1
-            // 
-            richEditBarController1.BarItems.Add(undoItem1);
-            richEditBarController1.BarItems.Add(redoItem1);
-            richEditBarController1.BarItems.Add(fileNewItem1);
-            richEditBarController1.BarItems.Add(fileOpenItem1);
-            richEditBarController1.BarItems.Add(fileSaveItem1);
-            richEditBarController1.BarItems.Add(fileSaveAsItem1);
-            richEditBarController1.BarItems.Add(quickPrintItem1);
-            richEditBarController1.BarItems.Add(printItem1);
-            richEditBarController1.BarItems.Add(printPreviewItem1);
-            richEditBarController1.BarItems.Add(encryptDocumentItem1);
-            richEditBarController1.BarItems.Add(showDocumentPropertiesFormItem1);
-            richEditBarController1.Control = richEditControl1;
+            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { undoItem1, redoItem1, fileNewItem1, fileOpenItem1, fileSaveItem1, fileSaveAsItem1, quickPrintItem1, printItem1, printPreviewItem1, encryptDocumentItem1, showDocumentPropertiesFormItem1, btnOpenDocument });
+            barManager1.MaxItemId = 12;
             // 
             // commonBar1
             // 
-            commonBar1.Control = richEditControl1;
+            commonBar1.Control = richEditControl;
             commonBar1.DockCol = 0;
             commonBar1.DockRow = 0;
             commonBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(undoItem1), new DevExpress.XtraBars.LinkPersistInfo(redoItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileNewItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "N", ""), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileOpenItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "O", ""), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileSaveItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "S", ""), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileSaveAsItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "A", ""), new DevExpress.XtraBars.LinkPersistInfo(quickPrintItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, printItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "P", ""), new DevExpress.XtraBars.LinkPersistInfo(printPreviewItem1) });
+            commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(undoItem1), new DevExpress.XtraBars.LinkPersistInfo(redoItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileNewItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "N", ""), new DevExpress.XtraBars.LinkPersistInfo(btnOpenDocument), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileSaveAsItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "A", ""), new DevExpress.XtraBars.LinkPersistInfo(quickPrintItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, printItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "P", ""), new DevExpress.XtraBars.LinkPersistInfo(printPreviewItem1) });
             // 
             // undoItem1
             // 
@@ -175,14 +132,6 @@
             printPreviewItem1.Id = 8;
             printPreviewItem1.Name = "printPreviewItem1";
             // 
-            // fileInfoBar1
-            // 
-            fileInfoBar1.Control = richEditControl1;
-            fileInfoBar1.DockCol = 1;
-            fileInfoBar1.DockRow = 0;
-            fileInfoBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            fileInfoBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(encryptDocumentItem1), new DevExpress.XtraBars.LinkPersistInfo(showDocumentPropertiesFormItem1) });
-            // 
             // encryptDocumentItem1
             // 
             encryptDocumentItem1.Id = 9;
@@ -193,12 +142,72 @@
             showDocumentPropertiesFormItem1.Id = 10;
             showDocumentPropertiesFormItem1.Name = "showDocumentPropertiesFormItem1";
             // 
+            // barDockControlTop
+            // 
+            barDockControlTop.CausesValidation = false;
+            barDockControlTop.Dock = DockStyle.Top;
+            barDockControlTop.Location = new Point(0, 0);
+            barDockControlTop.Manager = barManager1;
+            barDockControlTop.Size = new Size(898, 24);
+            // 
+            // barDockControlBottom
+            // 
+            barDockControlBottom.CausesValidation = false;
+            barDockControlBottom.Dock = DockStyle.Bottom;
+            barDockControlBottom.Location = new Point(0, 508);
+            barDockControlBottom.Manager = barManager1;
+            barDockControlBottom.Size = new Size(898, 0);
+            // 
+            // barDockControlLeft
+            // 
+            barDockControlLeft.CausesValidation = false;
+            barDockControlLeft.Dock = DockStyle.Left;
+            barDockControlLeft.Location = new Point(0, 24);
+            barDockControlLeft.Manager = barManager1;
+            barDockControlLeft.Size = new Size(0, 484);
+            // 
+            // barDockControlRight
+            // 
+            barDockControlRight.CausesValidation = false;
+            barDockControlRight.Dock = DockStyle.Right;
+            barDockControlRight.Location = new Point(898, 24);
+            barDockControlRight.Manager = barManager1;
+            barDockControlRight.Size = new Size(0, 484);
+            // 
+            // richEditBarController1
+            // 
+            richEditBarController1.BarItems.Add(undoItem1);
+            richEditBarController1.BarItems.Add(redoItem1);
+            richEditBarController1.BarItems.Add(fileNewItem1);
+            richEditBarController1.BarItems.Add(fileOpenItem1);
+            richEditBarController1.BarItems.Add(fileSaveItem1);
+            richEditBarController1.BarItems.Add(fileSaveAsItem1);
+            richEditBarController1.BarItems.Add(quickPrintItem1);
+            richEditBarController1.BarItems.Add(printItem1);
+            richEditBarController1.BarItems.Add(printPreviewItem1);
+            richEditBarController1.BarItems.Add(encryptDocumentItem1);
+            richEditBarController1.BarItems.Add(showDocumentPropertiesFormItem1);
+            richEditBarController1.Control = richEditControl;
+            // 
+            // btnOpenDocument
+            // 
+            btnOpenDocument.Caption = "barButtonItem1";
+            btnOpenDocument.Id = 11;
+            btnOpenDocument.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
+            btnOpenDocument.Name = "btnOpenDocument";
+            toolTipTitleItem2.Text = "Open (Ctrl+O)";
+            toolTipItem2.Text = "Open a document.";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            btnOpenDocument.SuperTip = superToolTip2;
+            btnOpenDocument.ItemClick += btnOpenDocument_ItemClick;
+            // 
             // XtraForm1
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(898, 508);
-            Controls.Add(richEditControl1);
+            Controls.Add(richEditControl);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
             Controls.Add(barDockControlBottom);
@@ -213,7 +222,7 @@
 
         #endregion
 
-        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
+        private DevExpress.XtraRichEdit.RichEditControl richEditControl;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraRichEdit.UI.CommonBar commonBar1;
         private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
@@ -225,7 +234,6 @@
         private DevExpress.XtraRichEdit.UI.QuickPrintItem quickPrintItem1;
         private DevExpress.XtraRichEdit.UI.PrintItem printItem1;
         private DevExpress.XtraRichEdit.UI.PrintPreviewItem printPreviewItem1;
-        private DevExpress.XtraRichEdit.UI.FileInfoBar fileInfoBar1;
         private DevExpress.XtraRichEdit.UI.EncryptDocumentItem encryptDocumentItem1;
         private DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem showDocumentPropertiesFormItem1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
@@ -233,5 +241,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
+        private DevExpress.XtraBars.BarButtonItem btnOpenDocument;
     }
 }

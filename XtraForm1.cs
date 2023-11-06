@@ -17,5 +17,10 @@ namespace QuestionPaperMaker
         {
             InitializeComponent();
         }
+
+        private void btnOpenDocument_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }
