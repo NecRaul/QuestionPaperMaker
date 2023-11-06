@@ -67,7 +67,7 @@ namespace QuestionPaperMaker
             var paperCount = Convert.ToInt32(arguments[5]);
             for (int i = 0; i < paperCount; i++)
             {
-                richEditControl.Document.AppendDocumentContent("Template.docx");
+                richEditControl.Document.AppendDocumentContent("QuestionPaperTemplate.docx");
                 if (i != paperCount - 1)
                     richEditControl.Document.AppendRtfText("{\\rtf1\\ansi \\page}");
                 richEditControl.Document.ReplaceAll("[PaperCount]", (i + 1).ToString(), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
