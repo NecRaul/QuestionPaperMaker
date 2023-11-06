@@ -46,7 +46,13 @@ namespace QuestionPaperMaker
                 MessageBox.Show("Suallar yüklənməyib!", "Suallar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var frm = new XtraForm1(wordDocument);
+            var arguments = new List<string>();
+            arguments.Add("");
+            arguments.Add("");
+            arguments.Add("");
+            arguments.Add("");
+            arguments.Add("");
+            var frm = new XtraForm1(wordDocument, arguments);
             frm.ShowDialog();
         }
     }
