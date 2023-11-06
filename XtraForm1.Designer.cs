@@ -213,7 +213,7 @@
             Controls.Add(barDockControlTop);
             Name = "XtraForm1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "XtraForm1";
+            Text = "Bilet görünüşü";
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)richEditBarController1).EndInit();
             ResumeLayout(false);
