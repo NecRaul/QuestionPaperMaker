@@ -182,7 +182,7 @@
             Controls.Add(txtFaculty);
             Name = "XtraForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "XtraForm";
+            Text = "Bilet yarat";
             ((System.ComponentModel.ISupportInitialize)txtFaculty.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtGroup.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtSubject.Properties).EndInit();
