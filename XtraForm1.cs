@@ -1,15 +1,4 @@
-﻿using DevExpress.CodeParser;
-using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Xceed.Words.NET;
 
 namespace QuestionPaperMaker
 {
@@ -18,6 +7,58 @@ namespace QuestionPaperMaker
         public XtraForm1(string documentPath, List<string> arguments)
         {
             InitializeComponent();
+            DocX document = DocX.Load(documentPath);
+            bool questions1Bool = false;
+            bool questions2Bool = false;
+            bool questions3Bool = false;
+            bool questions4Bool = false;
+            var questions1List = new List<string>();
+            var questions2List = new List<string>();
+            var questions3List = new List<string>();
+            var questions4List = new List<string>();
+            foreach (var paragraph in document.Paragraphs)
+            {
+                if (paragraph.Text == "1-ci sual*")
+                {
+                    questions1Bool = true;
+                    continue;
+                }
+                if (paragraph.Text == "2-ci sual**")
+                {
+                    questions2Bool = true;
+                    continue;
+                }
+                if (paragraph.Text == "3-cü sual***")
+                {
+                    questions3Bool = true;
+                    continue;
+                }
+                if (paragraph.Text == "4-cü sual****")
+                {
+                    questions4Bool = true;
+                    continue;
+                }
+                if (questions4Bool)
+                {
+                    questions4List.Add(paragraph.Text);
+                    continue;
+                }
+                if (questions3Bool)
+                {
+                    questions3List.Add(paragraph.Text);
+                    continue;
+                }
+                if (questions2Bool)
+                {
+                    questions2List.Add(paragraph.Text);
+                    continue;
+                }
+                if (questions1Bool)
+                {
+                    questions1List.Add(paragraph.Text);
+                    continue;
+                }
+            }
             var faculty = arguments[0];
             var group = arguments[1];
             var subject = arguments[2];
@@ -35,6 +76,15 @@ namespace QuestionPaperMaker
                 richEditControl.Document.ReplaceAll("[Subject]", subject, DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
                 richEditControl.Document.ReplaceAll("[Teacher]", teacher, DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
                 richEditControl.Document.ReplaceAll("[YearAndSemester]", yearAndSemester, DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                var random = new Random();
+                Func<List<string>, string> getRandomQuestion = (questionsList) => {
+                    int randomIndex = random.Next(0, questionsList.Count);
+                    return questionsList[randomIndex];
+                };
+                richEditControl.Document.ReplaceAll("[Question 1]", getRandomQuestion(questions1List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question 2]", getRandomQuestion(questions2List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question 3]", getRandomQuestion(questions3List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
+                richEditControl.Document.ReplaceAll("[Question 4]", getRandomQuestion(questions4List), DevExpress.XtraRichEdit.API.Native.SearchOptions.None);
             }
         }
     }
