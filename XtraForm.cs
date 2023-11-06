@@ -32,7 +32,7 @@ namespace QuestionPaperMaker
             };
             if (dlg.ShowDialog() != DialogResult.OK)
                 return;
-            if (Path.GetExtension(dlg.FileName) != ".doc" || Path.GetExtension(dlg.FileName) != ".docx")
+            if (Path.GetExtension(dlg.FileName) != ".doc" && Path.GetExtension(dlg.FileName) != ".docx")
             {
                 MessageBox.Show("Bu Word dokumenti deyil!", "Word", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -53,6 +53,7 @@ namespace QuestionPaperMaker
                 txtClass.Text,
                 txtTeacher.Text,
                 txtYearAndSemester.Text,
+                spnPaperCount.Text
             };
             var frm = new XtraForm1(wordDocument, arguments);
             frm.ShowDialog();
