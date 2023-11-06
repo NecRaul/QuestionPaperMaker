@@ -89,6 +89,7 @@
             btnLoad.Size = new Size(98, 23);
             btnLoad.TabIndex = 5;
             btnLoad.Text = "Sualları yüklə";
+            btnLoad.Click += btnLoad_Click;
             // 
             // labelControl1
             // 
@@ -137,6 +138,7 @@
             btnPreview.Size = new Size(98, 23);
             btnPreview.TabIndex = 11;
             btnPreview.Text = "Biletləri yarat";
+            btnPreview.Click += btnPreview_Click;
             // 
             // XtraForm
             // 
