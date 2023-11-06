@@ -40,51 +40,54 @@
             labelControl4 = new DevExpress.XtraEditors.LabelControl();
             labelControl5 = new DevExpress.XtraEditors.LabelControl();
             btnPreview = new DevExpress.XtraEditors.SimpleButton();
+            spnPaperCount = new DevExpress.XtraEditors.SpinEdit();
+            labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)txtFaculty.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtGroup.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtClass.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtTeacher.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtYearAndSemester.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)spnPaperCount.Properties).BeginInit();
             SuspendLayout();
             // 
             // txtFaculty
             // 
-            txtFaculty.Location = new Point(141, 44);
+            txtFaculty.Location = new Point(127, 14);
             txtFaculty.Name = "txtFaculty";
             txtFaculty.Size = new Size(100, 20);
             txtFaculty.TabIndex = 0;
             // 
             // txtGroup
             // 
-            txtGroup.Location = new Point(141, 70);
+            txtGroup.Location = new Point(127, 40);
             txtGroup.Name = "txtGroup";
             txtGroup.Size = new Size(100, 20);
             txtGroup.TabIndex = 1;
             // 
             // txtClass
             // 
-            txtClass.Location = new Point(141, 96);
+            txtClass.Location = new Point(127, 66);
             txtClass.Name = "txtClass";
             txtClass.Size = new Size(100, 20);
             txtClass.TabIndex = 2;
             // 
             // txtTeacher
             // 
-            txtTeacher.Location = new Point(141, 122);
+            txtTeacher.Location = new Point(127, 92);
             txtTeacher.Name = "txtTeacher";
             txtTeacher.Size = new Size(100, 20);
             txtTeacher.TabIndex = 3;
             // 
             // txtYearAndSemester
             // 
-            txtYearAndSemester.Location = new Point(141, 148);
+            txtYearAndSemester.Location = new Point(127, 118);
             txtYearAndSemester.Name = "txtYearAndSemester";
             txtYearAndSemester.Size = new Size(100, 20);
             txtYearAndSemester.TabIndex = 4;
             // 
             // btnLoad
             // 
-            btnLoad.Location = new Point(39, 175);
+            btnLoad.Location = new Point(25, 170);
             btnLoad.Name = "btnLoad";
             btnLoad.Size = new Size(98, 23);
             btnLoad.TabIndex = 5;
@@ -93,7 +96,7 @@
             // 
             // labelControl1
             // 
-            labelControl1.Location = new Point(100, 47);
+            labelControl1.Location = new Point(86, 17);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new Size(35, 13);
             labelControl1.TabIndex = 6;
@@ -101,7 +104,7 @@
             // 
             // labelControl2
             // 
-            labelControl2.Location = new Point(95, 73);
+            labelControl2.Location = new Point(81, 43);
             labelControl2.Name = "labelControl2";
             labelControl2.Size = new Size(40, 13);
             labelControl2.TabIndex = 7;
@@ -109,7 +112,7 @@
             // 
             // labelControl3
             // 
-            labelControl3.Location = new Point(86, 99);
+            labelControl3.Location = new Point(72, 69);
             labelControl3.Name = "labelControl3";
             labelControl3.Size = new Size(49, 13);
             labelControl3.TabIndex = 8;
@@ -117,7 +120,7 @@
             // 
             // labelControl4
             // 
-            labelControl4.Location = new Point(39, 125);
+            labelControl4.Location = new Point(25, 95);
             labelControl4.Name = "labelControl4";
             labelControl4.Size = new Size(96, 13);
             labelControl4.TabIndex = 9;
@@ -125,7 +128,7 @@
             // 
             // labelControl5
             // 
-            labelControl5.Location = new Point(73, 151);
+            labelControl5.Location = new Point(59, 121);
             labelControl5.Name = "labelControl5";
             labelControl5.Size = new Size(62, 13);
             labelControl5.TabIndex = 10;
@@ -133,18 +136,37 @@
             // 
             // btnPreview
             // 
-            btnPreview.Location = new Point(143, 175);
+            btnPreview.Location = new Point(129, 170);
             btnPreview.Name = "btnPreview";
             btnPreview.Size = new Size(98, 23);
             btnPreview.TabIndex = 11;
             btnPreview.Text = "Biletləri yarat";
             btnPreview.Click += btnPreview_Click;
             // 
+            // spnPaperCount
+            // 
+            spnPaperCount.EditValue = new decimal(new int[] { 0, 0, 0, 0 });
+            spnPaperCount.Location = new Point(127, 144);
+            spnPaperCount.Name = "spnPaperCount";
+            spnPaperCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            spnPaperCount.Size = new Size(100, 20);
+            spnPaperCount.TabIndex = 12;
+            // 
+            // labelControl6
+            // 
+            labelControl6.Location = new Point(79, 147);
+            labelControl6.Name = "labelControl6";
+            labelControl6.Size = new Size(42, 13);
+            labelControl6.TabIndex = 13;
+            labelControl6.Text = "Bilet sayı";
+            // 
             // XtraForm
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(298, 268);
+            ClientSize = new Size(248, 218);
+            Controls.Add(labelControl6);
+            Controls.Add(spnPaperCount);
             Controls.Add(btnPreview);
             Controls.Add(labelControl5);
             Controls.Add(labelControl4);
@@ -164,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)txtClass.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtTeacher.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtYearAndSemester.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)spnPaperCount.Properties).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +205,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.SimpleButton btnPreview;
+        private DevExpress.XtraEditors.SpinEdit spnPaperCount;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }
