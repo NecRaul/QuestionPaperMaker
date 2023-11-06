@@ -30,29 +30,29 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm1));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             richEditControl = new DevExpress.XtraRichEdit.RichEditControl();
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             commonBar1 = new DevExpress.XtraRichEdit.UI.CommonBar();
             undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
             redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
             fileNewItem1 = new DevExpress.XtraRichEdit.UI.FileNewItem();
-            fileOpenItem1 = new DevExpress.XtraRichEdit.UI.FileOpenItem();
-            fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
+            btnOpenDocument = new DevExpress.XtraBars.BarButtonItem();
             fileSaveAsItem1 = new DevExpress.XtraRichEdit.UI.FileSaveAsItem();
             quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
             printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
             printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
-            encryptDocumentItem1 = new DevExpress.XtraRichEdit.UI.EncryptDocumentItem();
-            showDocumentPropertiesFormItem1 = new DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem();
             barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            fileOpenItem1 = new DevExpress.XtraRichEdit.UI.FileOpenItem();
+            fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
+            encryptDocumentItem1 = new DevExpress.XtraRichEdit.UI.EncryptDocumentItem();
+            showDocumentPropertiesFormItem1 = new DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem();
             richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(components);
-            btnOpenDocument = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)richEditBarController1).BeginInit();
             SuspendLayout();
@@ -85,7 +85,7 @@
             commonBar1.DockCol = 0;
             commonBar1.DockRow = 0;
             commonBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(undoItem1), new DevExpress.XtraBars.LinkPersistInfo(redoItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileNewItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "N", ""), new DevExpress.XtraBars.LinkPersistInfo(btnOpenDocument), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileSaveAsItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "A", ""), new DevExpress.XtraBars.LinkPersistInfo(quickPrintItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, printItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "P", ""), new DevExpress.XtraBars.LinkPersistInfo(printPreviewItem1) });
+            commonBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(undoItem1), new DevExpress.XtraBars.LinkPersistInfo(redoItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileNewItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "N", ""), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, fileSaveAsItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "A", ""), new DevExpress.XtraBars.LinkPersistInfo(quickPrintItem1), new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, printItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "P", ""), new DevExpress.XtraBars.LinkPersistInfo(printPreviewItem1) });
             // 
             // undoItem1
             // 
@@ -102,15 +102,17 @@
             fileNewItem1.Id = 2;
             fileNewItem1.Name = "fileNewItem1";
             // 
-            // fileOpenItem1
+            // btnOpenDocument
             // 
-            fileOpenItem1.Id = 3;
-            fileOpenItem1.Name = "fileOpenItem1";
-            // 
-            // fileSaveItem1
-            // 
-            fileSaveItem1.Id = 4;
-            fileSaveItem1.Name = "fileSaveItem1";
+            btnOpenDocument.Caption = "barButtonItem1";
+            btnOpenDocument.Id = 11;
+            btnOpenDocument.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnOpenDocument.ImageOptions.SvgImage");
+            btnOpenDocument.Name = "btnOpenDocument";
+            toolTipTitleItem1.Text = "Open (Ctrl+O)";
+            toolTipItem1.Text = "Open a document.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            btnOpenDocument.SuperTip = superToolTip1;
             // 
             // fileSaveAsItem1
             // 
@@ -131,16 +133,6 @@
             // 
             printPreviewItem1.Id = 8;
             printPreviewItem1.Name = "printPreviewItem1";
-            // 
-            // encryptDocumentItem1
-            // 
-            encryptDocumentItem1.Id = 9;
-            encryptDocumentItem1.Name = "encryptDocumentItem1";
-            // 
-            // showDocumentPropertiesFormItem1
-            // 
-            showDocumentPropertiesFormItem1.Id = 10;
-            showDocumentPropertiesFormItem1.Name = "showDocumentPropertiesFormItem1";
             // 
             // barDockControlTop
             // 
@@ -174,6 +166,26 @@
             barDockControlRight.Manager = barManager1;
             barDockControlRight.Size = new Size(0, 484);
             // 
+            // fileOpenItem1
+            // 
+            fileOpenItem1.Id = 3;
+            fileOpenItem1.Name = "fileOpenItem1";
+            // 
+            // fileSaveItem1
+            // 
+            fileSaveItem1.Id = 4;
+            fileSaveItem1.Name = "fileSaveItem1";
+            // 
+            // encryptDocumentItem1
+            // 
+            encryptDocumentItem1.Id = 9;
+            encryptDocumentItem1.Name = "encryptDocumentItem1";
+            // 
+            // showDocumentPropertiesFormItem1
+            // 
+            showDocumentPropertiesFormItem1.Id = 10;
+            showDocumentPropertiesFormItem1.Name = "showDocumentPropertiesFormItem1";
+            // 
             // richEditBarController1
             // 
             richEditBarController1.BarItems.Add(undoItem1);
@@ -188,19 +200,6 @@
             richEditBarController1.BarItems.Add(encryptDocumentItem1);
             richEditBarController1.BarItems.Add(showDocumentPropertiesFormItem1);
             richEditBarController1.Control = richEditControl;
-            // 
-            // btnOpenDocument
-            // 
-            btnOpenDocument.Caption = "barButtonItem1";
-            btnOpenDocument.Id = 11;
-            btnOpenDocument.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem1.ImageOptions.SvgImage");
-            btnOpenDocument.Name = "btnOpenDocument";
-            toolTipTitleItem2.Text = "Open (Ctrl+O)";
-            toolTipItem2.Text = "Open a document.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            btnOpenDocument.SuperTip = superToolTip2;
-            btnOpenDocument.ItemClick += btnOpenDocument_ItemClick;
             // 
             // XtraForm1
             // 
