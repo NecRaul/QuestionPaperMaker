@@ -55,42 +55,42 @@
             txtFaculty.Location = new Point(127, 14);
             txtFaculty.Name = "txtFaculty";
             txtFaculty.Size = new Size(100, 20);
-            txtFaculty.TabIndex = 0;
+            txtFaculty.TabIndex = 1;
             // 
             // txtGroup
             // 
             txtGroup.Location = new Point(127, 40);
             txtGroup.Name = "txtGroup";
             txtGroup.Size = new Size(100, 20);
-            txtGroup.TabIndex = 1;
+            txtGroup.TabIndex = 3;
             // 
             // txtSubject
             // 
             txtSubject.Location = new Point(127, 66);
             txtSubject.Name = "txtSubject";
             txtSubject.Size = new Size(100, 20);
-            txtSubject.TabIndex = 2;
+            txtSubject.TabIndex = 5;
             // 
             // txtTeacher
             // 
             txtTeacher.Location = new Point(127, 92);
             txtTeacher.Name = "txtTeacher";
             txtTeacher.Size = new Size(100, 20);
-            txtTeacher.TabIndex = 3;
+            txtTeacher.TabIndex = 7;
             // 
             // txtYearAndSemester
             // 
             txtYearAndSemester.Location = new Point(127, 118);
             txtYearAndSemester.Name = "txtYearAndSemester";
             txtYearAndSemester.Size = new Size(100, 20);
-            txtYearAndSemester.TabIndex = 4;
+            txtYearAndSemester.TabIndex = 9;
             // 
             // btnLoad
             // 
             btnLoad.Location = new Point(25, 170);
             btnLoad.Name = "btnLoad";
             btnLoad.Size = new Size(98, 23);
-            btnLoad.TabIndex = 5;
+            btnLoad.TabIndex = 12;
             btnLoad.Text = "Sualları yüklə";
             btnLoad.Click += btnLoad_Click;
             // 
@@ -99,7 +99,7 @@
             labelControl1.Location = new Point(86, 17);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new Size(35, 13);
-            labelControl1.TabIndex = 6;
+            labelControl1.TabIndex = 0;
             labelControl1.Text = "Fakültə";
             // 
             // labelControl2
@@ -107,7 +107,7 @@
             labelControl2.Location = new Point(81, 43);
             labelControl2.Name = "labelControl2";
             labelControl2.Size = new Size(40, 13);
-            labelControl2.TabIndex = 7;
+            labelControl2.TabIndex = 2;
             labelControl2.Text = "Qrup №";
             // 
             // labelControl3
@@ -115,7 +115,7 @@
             labelControl3.Location = new Point(72, 69);
             labelControl3.Name = "labelControl3";
             labelControl3.Size = new Size(49, 13);
-            labelControl3.TabIndex = 8;
+            labelControl3.TabIndex = 4;
             labelControl3.Text = "Fənnin adı";
             // 
             // labelControl4
@@ -123,7 +123,7 @@
             labelControl4.Location = new Point(25, 95);
             labelControl4.Name = "labelControl4";
             labelControl4.Size = new Size(96, 13);
-            labelControl4.TabIndex = 9;
+            labelControl4.TabIndex = 6;
             labelControl4.Text = "İmtahan qəbul edən";
             // 
             // labelControl5
@@ -131,7 +131,7 @@
             labelControl5.Location = new Point(59, 121);
             labelControl5.Name = "labelControl5";
             labelControl5.Size = new Size(62, 13);
-            labelControl5.TabIndex = 10;
+            labelControl5.TabIndex = 8;
             labelControl5.Text = "İl və semestr";
             // 
             // btnPreview
@@ -139,7 +139,7 @@
             btnPreview.Location = new Point(129, 170);
             btnPreview.Name = "btnPreview";
             btnPreview.Size = new Size(98, 23);
-            btnPreview.TabIndex = 11;
+            btnPreview.TabIndex = 13;
             btnPreview.Text = "Biletləri yarat";
             btnPreview.Click += btnPreview_Click;
             // 
@@ -149,15 +149,16 @@
             spnPaperCount.Location = new Point(127, 144);
             spnPaperCount.Name = "spnPaperCount";
             spnPaperCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            spnPaperCount.Properties.MaskSettings.Set("mask", "f0");
             spnPaperCount.Size = new Size(100, 20);
-            spnPaperCount.TabIndex = 12;
+            spnPaperCount.TabIndex = 11;
             // 
             // labelControl6
             // 
             labelControl6.Location = new Point(79, 147);
             labelControl6.Name = "labelControl6";
             labelControl6.Size = new Size(42, 13);
-            labelControl6.TabIndex = 13;
+            labelControl6.TabIndex = 10;
             labelControl6.Text = "Bilet sayı";
             // 
             // XtraForm
