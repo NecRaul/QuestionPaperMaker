@@ -2,9 +2,9 @@
 
 namespace QuestionPaperMaker
 {
-    public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
+    public partial class FrmPreview : DevExpress.XtraEditors.XtraForm
     {
-        public XtraForm1(string documentPath, List<string> arguments)
+        public FrmPreview(string documentPath, List<string> arguments)
         {
             InitializeComponent();
             DocX document = DocX.Load(documentPath);

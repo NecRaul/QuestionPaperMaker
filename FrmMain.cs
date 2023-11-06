@@ -2,10 +2,10 @@
 
 namespace QuestionPaperMaker
 {
-    public partial class XtraForm : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMain : DevExpress.XtraEditors.XtraForm
     {
         private string wordDocument = string.Empty;
-        public XtraForm()
+        public FrmMain()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace QuestionPaperMaker
                 txtYearAndSemester.Text,
                 spnPaperCount.Text
             };
-            var frm = new XtraForm1(wordDocument, arguments);
+            var frm = new FrmPreview(wordDocument, arguments);
             frm.ShowDialog();
         }
     }

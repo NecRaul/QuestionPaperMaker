@@ -1,6 +1,6 @@
 ﻿namespace QuestionPaperMaker
 {
-    partial class XtraForm
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
