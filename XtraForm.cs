@@ -50,7 +50,7 @@ namespace QuestionPaperMaker
             {
                 txtFaculty.Text,
                 txtGroup.Text,
-                txtClass.Text,
+                txtSubject.Text,
                 txtTeacher.Text,
                 txtYearAndSemester.Text,
                 spnPaperCount.Text
